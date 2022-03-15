@@ -7,6 +7,7 @@
 int main(void)
 {
 	char letter;
+	/* blank line */
 	for (letter = 'a'; letter <= 'z'; letter++)
 	{
 		if (letter != 'e' && letter != 'q')
