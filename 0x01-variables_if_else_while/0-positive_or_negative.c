@@ -9,6 +9,7 @@
 int main(void)
 {
 	int n;
+	/* this is where the blank line belongs */
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
