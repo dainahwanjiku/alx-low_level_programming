@@ -7,6 +7,7 @@
 int main(void)
 {
 	int num;
+	/* blank line belongs here */
 	for (num = 0; num < 10; num++)
 		printf("%d", num);
 	printf("\n");
