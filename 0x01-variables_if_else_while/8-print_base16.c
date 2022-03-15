@@ -7,6 +7,7 @@
 int main(void)
 {
 	int num;
+	/* the black line belongs over here */
 	char letter;
 	for (num = 0; num < 10; num++)
 		putchar((num % 10) + '0');
