@@ -7,6 +7,7 @@
 int main(void)
 {
 	char letter;
+	/* this is the blank line */
 	for (letter = 'a'; letter <= 'z'; letter++)
 		putchar(letter);
 	putchar('\n');
