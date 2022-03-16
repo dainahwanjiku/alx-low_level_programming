@@ -1,6 +1,8 @@
 #include "main.h"
 /**
  * Print_alphabet -prints the alphabet in lowercase, followed by a new line.
+ *
+ *Return: void
  */
 /* lines of code according to betty style belong here */
 void print_alphabet(void)
