@@ -7,6 +7,7 @@
 /**
  * Print_alphabet -prints the alphabet in lowercase, followed by a new line.
  */
+/* lines of code according to betty style belong here */
 void print_alphabet(void)
 {
 	char letter;
