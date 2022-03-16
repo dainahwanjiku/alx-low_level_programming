@@ -3,12 +3,13 @@
  */
 
 #include "main.h"
+
 /**
  * Print_alphabet -prints the alphabet in lowercase, followed by a new line.
  */
 void print_alphabet(void)
 {
-	char letter; 
+	char letter;
 	/* blank line */
 	for (letter = 'a'; letter <= 'z'; letter++)
 	{
