@@ -1,10 +1,9 @@
-/**
- *  File: 9-times_table.c
- */
 #include "main.h"
 
 /**
  * times_table - Prints the 9 times table, starting with 0.
+ *
+ * Return: void
  */
 void times_table(void)
 {
