@@ -4,7 +4,6 @@
  *
  *Return: void
  */
-/* lines of code according to betty style belong here */
 void print_alphabet(void)
 {
 	char letter;
