@@ -4,6 +4,7 @@
  *
  *Return: void
  */
+/*this code return a void*/
 void print_alphabet(void)
 {
 	char letter;
