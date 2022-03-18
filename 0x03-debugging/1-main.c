@@ -2,11 +2,13 @@
 
 /**
  * main - causes an infinite loop
+ 
  * Return: 0
  */
 int main(void)
 {
 	int i;
+	/*blank line */
 	printf("Infinite loop incoming : \n");
 	i = 0;
 	/**
