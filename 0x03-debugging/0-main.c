@@ -9,6 +9,7 @@ int main(void)
 	/*blank line */
 {
 	int i;
+	/*blank line */
 	i = 0;
 	positive_or_negative(i);
 	return (0);
