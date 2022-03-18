@@ -6,7 +6,6 @@
  * Return: 0
  */
 int main(void)
-	/*blank line */
 {
 	int i;
 	/*blank line */
