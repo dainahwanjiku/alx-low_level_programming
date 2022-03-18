@@ -12,6 +12,7 @@
 int main(void)
 {
 	int i;
+	/* the blank line belongs here */
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 15 == 0)
