@@ -1,4 +1,3 @@
-/**
-*this readme contains information on arrays, pointers, strings and memory layout.
-*/
+This readme contains information on arrays, pointers, strings and memory layout.
+
 
