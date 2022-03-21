@@ -10,6 +10,7 @@
 int main(void)
 {
 	int i, j, k, s;
+	/* blank line */
 	char c[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char p[58];
 	srand(time(NULL));
@@ -34,8 +35,9 @@ int main(void)
 			}
 			k++;
 		}
-		p[i] = '\0';
-		printf("%s", p);
-		return (0);
+	}
+	p[i] = '\0';
+	printf("%s", p);
+	return (0);
 }
 
