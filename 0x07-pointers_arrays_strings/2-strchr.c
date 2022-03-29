@@ -10,7 +10,6 @@
 char *_strchr(char *s, char c)
 {
         int i;
-        /* blank line */
         for (i = 0; *(s + i); i++)
         {
                 /* blank line */
