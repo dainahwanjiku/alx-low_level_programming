@@ -14,6 +14,7 @@
         /* blank line */
         for (i = 0; i < n; i++)
         {
+                /* blank line */
                 *(s + i) = b;
         }
         return (s);
