@@ -14,7 +14,7 @@
          /* blank line */
          for (i = 0; i < n; i++)
          {
-                 /* blank line */
+      
                  *(dest + i) = *(src + i);
          }
          return (dest);
