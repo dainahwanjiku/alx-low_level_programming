@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _memcpy - copies memory area
+ *_memcpy - copies memory area
  *  @dest: destination of copy
- *  @src: memory area to copy
- *  @n: number of bytes to copy
+ * @src: memory area to copy
+ * @n: number of bytes to copy
  *
  *  Return: pointer to dest
  */
@@ -14,6 +14,7 @@
          /* blank line */
          for (i = 0; i < n; i++)
          {
+                 /* blank line */
                  *(dest + i) = *(src + i);
          }
          return (dest);
