@@ -9,6 +9,7 @@
 void puts_half(char *str)
 {
 	int j, i = 0;
+	/* blank line */
 	while (*(str + i))
 		i++;
 	j = i / 2;

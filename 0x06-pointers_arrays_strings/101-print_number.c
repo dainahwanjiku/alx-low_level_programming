@@ -14,7 +14,7 @@ void print_number(int n)
 	a0 = n / 1000000000; s0 = a0; a1 = (n / 100000000) % 10; s1 = s0 + a1;
 	a2 = (n / 10000000) % 10; s2 = s1 + a2;
 	a3 = (n / 1000000) % 10; s3 = s2 + a3;
-	a4 = (n / 1000000) % 10; s4 = s3 + a4;
+	a4 = (n / 100000) % 10; s4 = s3 + a4;
 	a5 = (n / 10000) % 10; s5 = s4 + a5;
 	a6 = (n / 1000) % 10; s6 = s5 + a6; a7 = (n / 100) % 10; s7 = s6 + a7;
 	a8 = (n / 10) % 10; s8 = s7 + a8; a9 = n % 10;
@@ -37,11 +37,10 @@ void print_number(int n)
 	if (s5 != 0)
 		_putchar('0' + a5);
 	if (s6 != 0)
-		 _putchar('0' + a6);
+	        _putchar('0' + a6);
 	if (s7 != 0)
-		 _putchar('0' + a7);
+	        _putchar('0' + a7);
 	if (s8 != 0)
 		_putchar('0' + a8);
 	_putchar('0' + a9);
 }
-
