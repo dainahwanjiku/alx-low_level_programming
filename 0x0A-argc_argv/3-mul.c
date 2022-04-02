@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	/* blank line */
 	if (argc != 3)
 	{
-		puts("Error")
+		puts("Error");
 		return (1);
 	}
 	a = atoi(argv[1]);
