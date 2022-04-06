@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * _strdup: returns a pointer to a new string which is a duplicate of the string str.
+ * _strdup - copy a string to a newly allocated space in memory
  * @str: string to copy
  *
  * Return: pointer to duplicated string or error
@@ -14,7 +14,7 @@ char *_strdup(char *str)
 	/* blank line */
 	if (str == NULL)
 		return (NULL);
-	for (i=0; str[i]; i++)
+	for (i = 0; str[i]; i++)
 		;
 	i++;
 	s = malloc(i * sizeof(char));
