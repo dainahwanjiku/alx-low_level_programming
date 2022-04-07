@@ -1,6 +1,11 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef MAIN_H
+#define MAIN_H
 
+/*
+ * File: main.h
+ * Desc: Header file containing the prototypes of all functions
+ *       included in the static library
+ */
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
@@ -22,4 +27,4 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
-#endif /* _MAIN_H_ */
+#endif
