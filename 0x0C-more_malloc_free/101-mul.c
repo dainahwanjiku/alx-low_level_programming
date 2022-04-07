@@ -1,28 +1,32 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * _print - moves a string one place to the left and prints the string
  * @str: string to move
  * @l: size of string
+ *
  * Return: void
  */
 void _print(char *str, int l)
 {
 	int i, j;
-	/* blank line */
+
 	i = j = 0;
 	while (i < l)
-        {
+	{
 		if (str[i] != '0')
 			j = 1;
 		if (j || i == l - 1)
 			_putchar(str[i]);
 		i++;
 	}
+
 	_putchar('\n');
 	free(str);
 }
+/* blank line */
 /**
  * mul - multiplies a char with a string and places the answer into dest
  * @n: char to multiply
@@ -30,12 +34,13 @@ void _print(char *str, int l)
  * @num_index: last non NULL index of num
  * @dest: destination of multiplication
  * @dest_index: highest index to start addition
+ *
  * Return: pointer to dest, or NULL on failure
  */
 char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 {
 	int j, k, mul, mulrem, add, addrem;
-        /* blank line */
+
 	mulrem = addrem = 0;
 	for (j = num_index, k = dest_index; j >= 0; j--, k--)
 	{
@@ -66,7 +71,7 @@ char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 int check_for_digits(char **av)
 {
 	int i, j;
-	/* blank line */
+
 	for (i = 1; i < 3; i++)
 	{
 		for (j = 0; av[i][j]; j++)
@@ -75,7 +80,7 @@ int check_for_digits(char **av)
 				return (1);
 		}
 	}
-        return (0);
+	return (0);
 }
 /**
  * init - initializes a string
@@ -87,7 +92,7 @@ int check_for_digits(char **av)
 void init(char *str, int l)
 {
 	int i;
-        /* blank line */
+
 	for (i = 0; i < l; i++)
 		str[i] = '0';
 	str[i] = '\0';
@@ -96,18 +101,18 @@ void init(char *str, int l)
  * main - multiply two numbers
  * @argc: number of arguments
  * @argv: argument vector
+ *
  * Return: zero, or exit status of 98 if failure
  */
 int main(int argc, char *argv[])
-
 {
 	int l1, l2, ln, ti, i;
 	char *a;
 	char *t;
 	char e[] = "Error\n";
-
+        /* blank line */
 	if (argc != 3 || check_for_digits(argv))
-        {
+	{
 		for (ti = 0; e[ti]; ti++)
 			_putchar(e[ti]);
 		exit(98);
@@ -126,14 +131,14 @@ int main(int argc, char *argv[])
 	}
 	init(a, ln - 1);
 	for (ti = l2 - 1, i = 0; ti >= 0; ti--, i++)
-        {
+	{
 		t = mul(argv[2][ti], argv[1], l1 - 1, a, (ln - 2) - i);
-                if (t == NULL)
+		if (t == NULL)
 		{
 			for (ti = 0; e[ti]; ti++)
 				_putchar(e[ti]);
 			free(a);
-                        exit(98);
+			exit(98);
 		}
 	}
 	_print(a, ln - 1);
