@@ -23,7 +23,6 @@ void _print(char *str, int l)
 	_putchar('\n');
 	free(str);
 }
-
 /**
  * mul - multiplies a char with a string and places the answer into dest
  * @n: char to multiply
@@ -36,7 +35,7 @@ void _print(char *str, int l)
 char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 {
 	int j, k, mul, mulrem, add, addrem;
-
+        /* blank line */
 	mulrem = addrem = 0;
 	for (j = num_index, k = dest_index; j >= 0; j--, k--)
 	{
@@ -65,7 +64,6 @@ char *mul(char n, char *num, int num_index, char *dest, int dest_index)
  * Return: 0 if digits, 1 if not
  */
 int check_for_digits(char **av)
-
 {
 	int i, j;
 	/* blank line */
@@ -87,10 +85,9 @@ int check_for_digits(char **av)
  * Return: void
  */
 void init(char *str, int l)
-
 {
 	int i;
-
+        /* blank line */
 	for (i = 0; i < l; i++)
 		str[i] = '0';
 	str[i] = '\0';
