@@ -15,19 +15,19 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	void *mem;
 	char *filler;
 	unsigned int index;
-
+        /* blank line */
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-
+        /* blank line */
 	mem = malloc(size * nmemb);
-
+        /* blank line */
 	if (mem == NULL)
 		return (NULL);
-
+        /* blank line */
 	filler = mem;
-
+        /* blank line */
 	for (index = 0; index < (size * nmemb); index++)
 		filler[index] = '\0';
-
+        /* blank line */
 	return (mem);
 }
