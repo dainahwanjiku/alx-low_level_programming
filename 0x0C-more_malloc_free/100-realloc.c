@@ -8,32 +8,45 @@
  * @new_size: size of newly allocated space
  * Return: pointer to newly allocated memory, or NULL if failure
  */
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *p;
-	unsigned int i, max = new_size;
-	char *oldp = ptr;
-	/* blank line */
+	void *mem;
+	char *ptr_copy, *filler;
+	unsigned int index;
+
+	if (new_size == old_size)
+		return (ptr);
+
 	if (ptr == NULL)
 	{
-		p = malloc(new_size);
-		return (p);
+		mem = malloc(new_size);
+
+		if (mem == NULL)
+			return (NULL);
+
+		return (mem);
 	}
-	else if (new_size == 0)
+
+	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	else if (new_size == old_size)
-		return (ptr);
 
-	p = malloc(new_size);
-	if (p == NULL)
+	ptr_copy = ptr;
+	mem = malloc(sizeof(*ptr_copy) * new_size);
+
+	if (mem == NULL)
+	{
+		free(ptr);
 		return (NULL);
-	if (new_size > old_size)
-		max = old_size;
-	for (i = 0; i < max; i++)
-		p[i] = oldp[i];
+	}
+
+	filler = mem;
+
+	for (index = 0; index < old_size && index < new_size; index++)
+		filler[index] = *ptr_copy++;
+
 	free(ptr);
-	return (p);
+	return (mem);
 }
