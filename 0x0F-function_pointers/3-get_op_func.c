@@ -4,6 +4,7 @@
 /**
  * get_op_func - selects the correct operation toperform
  * @s: operation to perform
+ 
  * Return: pointer to the correct function
  */
 int (*get_op_func(char *s))(int, int)
@@ -15,8 +16,9 @@ int (*get_op_func(char *s))(int, int)
 		{"/", op_div},
 		{"%", op_mod},
                 {NULL, NULL}
-	;
+	};
 	int i;
+	/* blank line */
 	i = 0;
 	while (ops[i].op != NULL)
 	{
