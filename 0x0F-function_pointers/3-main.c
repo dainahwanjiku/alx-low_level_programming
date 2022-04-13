@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 {
 	int a, b, c;
 	int (*f)(int, int);
+	/* blank line */
 	if (argc != 4)
 	{
 		printf("Error\n");
