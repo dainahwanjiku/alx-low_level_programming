@@ -13,6 +13,7 @@ int op_add(int a, int b)
 {
 	return (a + b);
 }
+
 /**
  * op_sub - subtracts b from a
  * @a: first number
@@ -24,6 +25,7 @@ int op_sub(int a, int b)
 {
 	return (a - b);
 }
+
 /**
  * op_mul - multiplies a and b
  * @a: first number
@@ -35,6 +37,7 @@ int op_mul(int a, int b)
 {
 	return (a * b);
 }
+
 /**
  * op_div - divides a by b
  * @a: first number
@@ -50,6 +53,7 @@ int op_div(int a, int b)
                 exit(100);							        }
 	return (a / b);
 }
+
 /**
  * op_mod - find the remainder of the division of a by b
  * @a: first number
