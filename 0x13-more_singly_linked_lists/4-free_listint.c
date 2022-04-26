@@ -8,14 +8,12 @@
  */
 void free_listint(listint_t *head)
 {
-
-
-
-
-printf("    \n", )
-
-
-
-
-
+	listint_t *next;
+	/* blank line */
+	while(head != NULL)
+	{
+		next = head->next;
+		free(head);
+		head = next;
+	}
 }
