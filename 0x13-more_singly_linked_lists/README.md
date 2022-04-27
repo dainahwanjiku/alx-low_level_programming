@@ -39,3 +39,15 @@ Write a function that inserts a new node at a given position.
 
 10. Delete at index
 Write a function that deletes the node at index index of a listint_t linked list.
+
+11. Reverse list
+Write a function that reverses a listint_t linked list.
+
+12. Print (safe version)
+Write a function that prints a listint_t linked list.
+
+13. Free (safe version)
+Write a function that frees a listint_t list.
+
+14. Find the loop
+Write a function that finds the loop in a linked list.
