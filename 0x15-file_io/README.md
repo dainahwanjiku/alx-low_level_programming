@@ -1,5 +1,6 @@
 0x15. C - File I/O
 This readme explains more about file input and output.
+
 Learning Objectives
 
 i) How to create, open, close, read and write files
@@ -52,7 +53,7 @@ If text_content is NULL, do not add anything to the file. Return 1 if the file e
   where NAME_OF_THE_FILE is the first argument passed to your program
 - if you can not create or if write to file_to fails, exit with code 99 and print Error: Can't write to NAME_OF_THE_FILE, followed by a new line, on the POSIX standard error
   where NAME_OF_THE_FILE is the second argument passed to your program
-- if you can not close a file descriptor , exit with code 100 and print Error: Can't close fd FD_VALUE, followed by a new line, on the POSIX standard error
+- if you can not close a file descriptor , exit with code 100 and print Error: Can't close fd FD_VALUE, followed by a new line, on the POSIX standard       error
   where FD_VALUE is the value of the file descriptor
 - Permissions of the created file: rw-rw-r--. If the file already exists, do not change the permissions
 - You must read 1,024 bytes at a time from the file_from to make less system calls. Use a buffer
