@@ -18,5 +18,5 @@ size_t dlistint_len(const dlistint_t *h)
 		current = current->next;
 		nos_nodes++;
 	}
-	return (nbr_nodes);
+	return (nos_nodes);
 }
