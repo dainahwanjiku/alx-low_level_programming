@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * insert_dnodeint_at_index - insert node at specific index
