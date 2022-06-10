@@ -5,19 +5,19 @@
  * @h: head of linked list
  * @idx: index of new node
  * @n: new node value
+ *
  * Return: inserted node
  */
-
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *current;
 	dlistint_t *new;
-
+	/* blank line */
 	if (h == NULL)
 		return (0);
-
+	/* blank line */
 	current = *h;
-
+	/* blank line */
 	while (idx != 0)
 	{
 		current = current->next;
@@ -25,22 +25,19 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		if (current == NULL)
 			return (NULL);
 	}
-
 	new = malloc(sizeof(dlistint_t));
-
+	/* blank line */
 	if (new == NULL)
 	{
 		free(new);
 		return (NULL);
 	}
-
+	/* blank line */
 	new->n = n;
 	new->next = current;
 	new->prev = current->prev;
 	if (current->prev != NULL)
 		current->prev->next = new;
-
-	/*TODO: Handle special case when idx is 0 and last index*/
-
+	/* blank line */
 	return (current);
 }
