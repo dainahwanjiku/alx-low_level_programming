@@ -4,10 +4,10 @@
 /**
  * main - check the code
  *
- * Return: Always EXIT_SUCCESS.
+ * Return : 0
  */
 int main(void)
 {
 	printf("%d\n", _strlen("My Dyn Lib"));
-	return (1);
+	return (0);
 }
