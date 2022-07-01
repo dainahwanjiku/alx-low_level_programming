@@ -32,20 +32,20 @@ hash_node_t *make_hash_node(const char *key, const char *value)
 }
 
 /**
- * hash_table_set - 
+ * hash_table_set - table set
  * @ht: is the hash table to add or update key
- * @key: is the key cannot be an empty string 
+ * @key: is the key cannot be an empty string
  * @value: associated with the key. must be duplicate
- * 
- * Return: success 1 otherwise 0
+ *
+ * Return:success 1 otherwise 0
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	hash_node_t *hash_node, *tmp;
 	char *new_value;
-
-	if (ht == NULL || ht->array == NULL || ht->size == 0|| 
+	
+	if (ht == NULL || ht->array == NULL || ht->size == 0 || 
 	    key == NULL || strlen(key) == 0 || value == NULL)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
