@@ -5,7 +5,7 @@
  * @key: key for the node
  * @value: for the node
  *
- * Return: the new node, or null on failure
+ * Return: the new node, or NULL on failure
  */
 hash_node_t *make_hash_node(const char *key, const char *value)
 {
@@ -20,7 +20,7 @@ hash_node_t *make_hash_node(const char *key, const char *value)
 		free(node);
 		return (NULL);
 	}
-	node->value = strup(value);
+	node->value = strdup(value);
 	if (node->value == NULL)
 	{
 		free(node->key);
@@ -31,21 +31,22 @@ hash_node_t *make_hash_node(const char *key, const char *value)
 	return (node);
 }
 
+
 /**
- * hash_table_set - table set
- * @ht: is the hash table to add or update key
- * @key: is the key cannot be an empty string
- * @value: associated with the key. must be duplicate
+ * hash_table_set - sets a key to a value in the hash table
+ * @ht: hash table to add elemt to
+ * @key: key for the data
+ * @value: data to store
  *
- * Return:success 1 otherwise 0
+ * Return: 1 if successful, 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	hash_node_t *hash_node, *tmp;
 	char *new_value;
-	
-	if (ht == NULL || ht->array == NULL || ht->size == 0 || 
+
+	if (ht == NULL || ht->array == NULL || ht->size == 0 ||
 	    key == NULL || strlen(key) == 0 || value == NULL)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
@@ -54,7 +55,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(tmp->key, key) == 0)
 		{
-			new_value == strdup(value);
+			new_value = strdup(value);
 			if (new_value == NULL)
 				return (0);
 			free(tmp->value);
